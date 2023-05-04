@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="43472" started-at="2023-05-02T18:44:34 IST" finished-at="2023-05-02T18:45:17 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="43472" started-at="2023-05-02T18:44:34 IST" finished-at="2023-05-02T18:45:17 IST">
+      <class name="com.jobma.qa.test.EvaluatePageTest">
+        <test-method status="PASS" signature="setupEvaluatePage()[pri:0, instance:com.jobma.qa.test.EvaluatePageTest@1dc3502b]" name="setupEvaluatePage" is-config="true" duration-ms="39421" started-at="2023-05-02T18:44:34 IST" finished-at="2023-05-02T18:45:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupEvaluatePage -->
+        <test-method status="PASS" signature="bulkShareTest()[pri:0, instance:com.jobma.qa.test.EvaluatePageTest@1dc3502b]" name="bulkShareTest" duration-ms="3716" started-at="2023-05-02T18:45:13 IST" finished-at="2023-05-02T18:45:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bulkShareTest -->
+        <test-method status="PASS" signature="Close()[pri:0, instance:com.jobma.qa.test.EvaluatePageTest@1dc3502b]" name="Close" is-config="true" duration-ms="260" started-at="2023-05-02T18:45:17 IST" finished-at="2023-05-02T18:45:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+      </class> <!-- com.jobma.qa.test.EvaluatePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
