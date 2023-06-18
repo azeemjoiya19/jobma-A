@@ -67,7 +67,7 @@ public class JobmaDashboardTest extends TestBase {
 	}
 	@Test(priority=5)
 
-	public void clickOnSubaccountsModuleTest()
+	public void clickOnSubaccountsModuleTest() throws IOException
 	{
 		jd.clickOnSubaccountsModule();
 	}

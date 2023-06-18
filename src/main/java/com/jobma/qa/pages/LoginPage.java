@@ -55,9 +55,9 @@ public class LoginPage extends TestBase{
 		Actions action = new Actions(driver);
 		action.moveToElement(loginbtn).build().perform();
 		loginbtn.click();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(200));
 	
-	//	Thread.sleep(10000);
+		//Thread.sleep(10000);
 		String dashboardtitle =driver.getTitle();
 		System.out.println(dashboardtitle);
 		Assert.assertEquals(dashboardtitle, "Jobma");

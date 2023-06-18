@@ -64,6 +64,8 @@ public class InterviewKitListing extends TestBase {
 	@FindBy(xpath="(//input[@id='default_kit_1'])[1]")
 	WebElement cfokitcheckbox;
 
+	@FindBy(xpath="(//a[contains(@class,'btn btn-light btn-sm mb-1 jobtitleJQ data-inactive jobtitleJQ')])[1]")
+	WebElement Setupinterviewonkit;
 
 
 

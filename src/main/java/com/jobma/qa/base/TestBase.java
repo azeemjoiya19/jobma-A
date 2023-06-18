@@ -13,6 +13,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import com.jobma.qa.pages.AddNewInterviewKitPage;
+import com.jobma.qa.pages.AddSubAccountPricing;
+import com.jobma.qa.pages.ApplicationEvaluate;
 import com.jobma.qa.pages.EvaluatePage;
 import com.jobma.qa.pages.InterviewKitListing;
 import com.jobma.qa.pages.InterviewLinkPage;
@@ -24,6 +26,9 @@ import com.jobma.qa.pages.PositionsPage;
 import com.jobma.qa.pages.PostAJob;
 import com.jobma.qa.pages.QuestionLibrary;
 import com.jobma.qa.pages.ScheduleInterviewPage;
+import com.jobma.qa.pages.SettingsPage;
+import com.jobma.qa.pages.SubAccount;
+import com.jobma.qa.pages.SubscriptionPage;
 import com.jobma.qa.pages.TrackPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -47,6 +52,11 @@ public class TestBase {
 	public PositionsPage pp;
 	public JobConfigurationPage jcp;
 	public EvaluatePage ep;
+	public SubAccount sa;
+	public AddSubAccountPricing sapp;
+	public SubscriptionPage sp;
+	public ApplicationEvaluate ae;
+	public SettingsPage settings;
 
 
 	public TestBase() throws IOException  //Constructor for test Base Class
@@ -73,7 +83,7 @@ public class TestBase {
 			driver=new ChromeDriver();
 		}
 
-		else if(browsername.equals("browser")) {
+		else if(browsername.equals("")) {
 
 			WebDriverManager.edgedriver().setup();
 
@@ -81,11 +91,12 @@ public class TestBase {
 		}
 
 		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);	
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(90));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
 		
 
 

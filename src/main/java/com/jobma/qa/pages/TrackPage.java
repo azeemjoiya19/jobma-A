@@ -55,6 +55,12 @@ public class TrackPage  extends TestBase{
 	@FindBy(xpath="(//i[@class='bi bi-search'])[2]")
 	WebElement clickonsearchbtn;
 	
+	@FindBy(xpath="(//button[contains(@class,'btn btn-secondary btn-shadow me-1 mb-2  mb-lg-0')])[2]")
+	WebElement setupinterviewbtn;
+	
+	@FindBy(xpath="(//div[contains(@id,'msg')])[4]")
+	WebElement Cantaccessmessage;
+	
 	
 	
 	

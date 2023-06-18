@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.time.Duration;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.jobma.qa.base.TestBase;
@@ -20,42 +22,57 @@ public class EvaluatePageTest extends TestBase {
 		
 	}
 	
-	@BeforeMethod
+	@BeforeSuite
 	public void setupEvaluatePage() throws InterruptedException, IOException
 	{
 		TestBase.intialize();
 		lp = new LoginPage();
 		jd = new JobmaDashboard();
 		jd=lp.login(prop.getProperty("username"), prop.getProperty("password"));
-		ep = new EvaluatePage();
+		 		ep = new EvaluatePage();
 		jd.clickOnEvaluateModule();
-	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		
 		
 	}
 	
-	@Test
+	@Test(priority=1)
 	public void evaluatePageTest() throws IOException
 	{
 		ep.evaluatePage();
 	}
 	
-	@Test
+	@Test(priority=3)
 	public void bulkDeleteTest()
 	{
 		ep.bulkDelete();
 	}
 	
-	@Test
-	public void  bulkShareTest() 
+	@Test(priority=2)
+	public void  bulkShareTest() throws InterruptedException 
 	{
 	   ep.bulkShare();
+	}
+	
+	@Test
+	public void searchapplicantTest()
+	{
+		ep.searchApplicant();
+	}
+	@Test
+	public void statusFilterTest()
+	{
+		ep.statusFilter();
 	}
 	
 	
 	
 
-	@AfterMethod
+	
+	
+	
+
+	@AfterSuite
 	public void Close()
 	{
 		TestBase.closeBrowser();

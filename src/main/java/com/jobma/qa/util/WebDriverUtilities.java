@@ -23,6 +23,22 @@ public class WebDriverUtilities  extends TestBase{
 		{
 			driver.switchTo().window(b);
 		}
+		
+	}
+	
+	public static boolean checkElementIsClickable(WebElement ele)
+	{
+		try {
+			
+			ele.click();
+			
+			return true;
+		}
+		catch(Exception e)
+		{
+			
+			return false;
+		}
 	}
 	
 	public static void wait(WebDriver driver ,int sec, WebElement ele)
@@ -30,4 +46,12 @@ public class WebDriverUtilities  extends TestBase{
 		WebDriverWait w =new WebDriverWait(driver,sec);
 		WebElement e = w.until(ExpectedConditions.elementToBeClickable(ele));
 	}
+	
+	public static void wait1(WebDriver driver ,int sec, WebElement ele)
+	{
+		WebDriverWait w = new WebDriverWait(driver, sec);
+		WebElement e = w.until(ExpectedConditions.visibilityOf(ele));
+	}
+	
+	
 }

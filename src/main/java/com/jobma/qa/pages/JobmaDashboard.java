@@ -11,6 +11,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.jobma.qa.base.TestBase;
+import com.jobma.qa.util.JavascriptClicks;
+import com.jobma.qa.util.WebDriverUtilities;
 
 public class JobmaDashboard extends TestBase {
 
@@ -27,10 +29,13 @@ public class JobmaDashboard extends TestBase {
 	@FindBy(xpath="(//span[contains(text(),'Setup Interview')])[1]") //setupinterview
 	WebElement clickonsetupinterview;
 
+	@FindBy(xpath="(//span[contains(text(),'Interview Link')])[1]")
+	WebElement interviewlinkbtn;
+
 	@FindBy(xpath="//span[contains(text(),'Applicants')]")// clickonapplicant module
 	WebElement clickonapplicants;
-	
-	@FindBy(xpath="//span[@class='nav-txt'][normalize-space()='Evaluate']")
+
+	@FindBy(xpath="(//span[normalize-space()='Evaluate'])[1]") //evaluate in applicants module
 	WebElement evaluate;
 
 	@FindBy(xpath="//span[normalize-space()='Track']")
@@ -44,7 +49,13 @@ public class JobmaDashboard extends TestBase {
 	WebElement clickonreports;
 
 	@FindBy(xpath="(//span[contains(text(),'Integrations')])[1]") //click on integration
-	WebElement clickonintegration;
+	WebElement clickonintegrationmodule;
+
+	@FindBy(xpath="(//span[contains(text(),'Integrations')])[2]")
+	WebElement integrationbtn;
+
+	@FindBy(xpath="//span[contains(text(),'Interview Listing')]")
+	WebElement integrationlisting;
 
 	@FindBy(xpath="//span[contains(text(),'Billing')]") //click on billing
 	WebElement clickonbilling;
@@ -120,6 +131,39 @@ public class JobmaDashboard extends TestBase {
 	@FindBy(xpath="(//span[contains(text(),'Post a Job')])[1]")
 	WebElement postajobbtn;
 
+	@FindBy(xpath="(//a[contains(text(),'Evaluate')])[1]")
+	WebElement evaluatebtnatawaitingdecision;
+
+	@FindBy(xpath="(//a[contains(text(),'Evaluate')])[5]")
+	WebElement evaluatebtnatrecentapplicants;
+
+	@FindBy(xpath="//a[contains(@id,'theme-switch')]")
+	WebElement plantext;
+
+	@FindBy(xpath="(//span[contains(text(),'Dashboard')])[2]")
+	WebElement dashboardtext;
+
+	@FindBy(xpath="(//div[contains(@id,'msg')])[4]")
+	WebElement cantaccessmessage;
+
+	@FindBy(xpath="(//i[contains(@class,'bi bi-link-45deg nav-icon-size2')])[2]")
+	WebElement quicklinks;
+
+
+	@FindBy(xpath="(//span[contains(text(),'Setup Interview')])[2]")
+	WebElement Setupinterviewquicklinks;
+
+	@FindBy(xpath="//a[contains(text(),'Schedule Interview')]")
+	WebElement dashboardscheduleinterview;
+	
+	@FindBy(xpath="//i[contains(@class,'bi bi-gear nav-icon-size')]")
+	WebElement dashboardsettings;
+	
+	
+
+
+
+
 
 
 
@@ -165,16 +209,17 @@ public class JobmaDashboard extends TestBase {
 	{
 		clickonapplicants.click();
 	}
-	
+
 	public EvaluatePage clickOnEvaluateModule() throws IOException
 	{
+
 		clickonapplicants.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		clickonevaluate.click();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
-		
+
 		return new EvaluatePage();
-		
+
 	}
 
 	public TrackPage clickOnTrack() throws IOException
@@ -184,9 +229,11 @@ public class JobmaDashboard extends TestBase {
 	}
 
 
-	public void clickOnSubaccountsModule()
+	public SubAccount clickOnSubaccountsModule() throws IOException
 	{
 		clickonsubaccount.click();
+
+		return  new SubAccount();
 	}
 
 	public void clickOnReportsModule()
@@ -196,7 +243,7 @@ public class JobmaDashboard extends TestBase {
 
 	public void clickOnIntegrationModule()
 	{
-		clickonintegration.click();
+		clickonintegrationmodule.click();
 	}
 
 	public void clickOnBillingsModule() throws InterruptedException
@@ -226,7 +273,7 @@ public class JobmaDashboard extends TestBase {
 
 	public ScheduleInterviewPage clickOnScheduleInterviewBtn() throws InterruptedException, IOException
 	{ 
-		
+
 		clickonscheduleinterviewbtn.click();
 		Thread.sleep(5000);
 		return new ScheduleInterviewPage();
@@ -247,7 +294,7 @@ public class JobmaDashboard extends TestBase {
 	public void clickOnEvaluateBtn()
 	{
 		clickonevaluate.click();
-		
+
 	}
 
 	public void clickOnViewallBtnOfInterviewsInvitations()
@@ -315,6 +362,15 @@ public class JobmaDashboard extends TestBase {
 		postajobbtn.click();
 
 		return new PostAJob();
+
+	}
+
+	public void clickOnEvaluatebtnOfAwaitingDecision()
+	{
+		JavascriptClicks.javaScripthandle(evaluatebtnatawaitingdecision);
+		WebDriverUtilities.wait(driver, 50, evaluatebtnatawaitingdecision);
+		evaluatebtnatawaitingdecision.click();
+
 
 	}
 

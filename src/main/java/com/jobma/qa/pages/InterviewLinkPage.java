@@ -15,6 +15,9 @@ public class InterviewLinkPage  extends TestBase{
 
 	@FindBy(xpath="(//span[contains(text(),'Interview Link')])[3]")
 	WebElement interviewlinktext;
+	
+	@FindBy(xpath="(//button[contains(text(),'Setup Interview')])[1]")
+	WebElement Setupinterviewbtn;
 
 	//initialization of OR 
 

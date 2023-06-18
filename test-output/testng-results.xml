@@ -1,25 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43472" started-at="2023-05-02T18:44:34 IST" finished-at="2023-05-02T18:45:17 IST">
+  <suite name="Default suite" duration-ms="248374" started-at="2023-06-08T18:13:42 IST" finished-at="2023-06-08T18:17:50 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43472" started-at="2023-05-02T18:44:34 IST" finished-at="2023-05-02T18:45:17 IST">
-      <class name="com.jobma.qa.test.EvaluatePageTest">
-        <test-method status="PASS" signature="setupEvaluatePage()[pri:0, instance:com.jobma.qa.test.EvaluatePageTest@1dc3502b]" name="setupEvaluatePage" is-config="true" duration-ms="39421" started-at="2023-05-02T18:44:34 IST" finished-at="2023-05-02T18:45:13 IST">
+    <test name="Default test" duration-ms="248374" started-at="2023-06-08T18:13:42 IST" finished-at="2023-06-08T18:17:50 IST">
+      <class name="com.jobma.qa.test.SubAccountTest">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:com.jobma.qa.test.SubAccountTest@17f3eefb]" name="Setup" is-config="true" duration-ms="21825" started-at="2023-06-08T18:13:20 IST" finished-at="2023-06-08T18:13:42 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupEvaluatePage -->
-        <test-method status="PASS" signature="bulkShareTest()[pri:0, instance:com.jobma.qa.test.EvaluatePageTest@1dc3502b]" name="bulkShareTest" duration-ms="3716" started-at="2023-05-02T18:45:13 IST" finished-at="2023-05-02T18:45:17 IST">
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="verifySubAccountPageTest()[pri:1, instance:com.jobma.qa.test.SubAccountTest@17f3eefb]" name="verifySubAccountPageTest" duration-ms="51" started-at="2023-06-08T18:13:42 IST" finished-at="2023-06-08T18:13:42 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bulkShareTest -->
-        <test-method status="PASS" signature="Close()[pri:0, instance:com.jobma.qa.test.EvaluatePageTest@1dc3502b]" name="Close" is-config="true" duration-ms="260" started-at="2023-05-02T18:45:17 IST" finished-at="2023-05-02T18:45:17 IST">
+        </test-method> <!-- verifySubAccountPageTest -->
+        <test-method status="PASS" signature="addSubUserTest()[pri:2, instance:com.jobma.qa.test.SubAccountTest@17f3eefb]" name="addSubUserTest" duration-ms="20015" started-at="2023-06-08T18:13:42 IST" finished-at="2023-06-08T18:14:02 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Close -->
-      </class> <!-- com.jobma.qa.test.EvaluatePageTest -->
+        </test-method> <!-- addSubUserTest -->
+        <test-method status="PASS" signature="permissionBtnTest()[pri:3, instance:com.jobma.qa.test.SubAccountTest@17f3eefb]" name="permissionBtnTest" duration-ms="1334" started-at="2023-06-08T18:14:02 IST" finished-at="2023-06-08T18:14:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- permissionBtnTest -->
+        <test-method status="PASS" signature="permissionDeniedEvaluateCandidateTest()[pri:4, instance:com.jobma.qa.test.SubAccountTest@17f3eefb]" name="permissionDeniedEvaluateCandidateTest" duration-ms="16621" started-at="2023-06-08T18:14:03 IST" finished-at="2023-06-08T18:14:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- permissionDeniedEvaluateCandidateTest -->
+        <test-method status="PASS" signature="manageSubaccountPermissionDeniedTest()[pri:5, instance:com.jobma.qa.test.SubAccountTest@17f3eefb]" name="manageSubaccountPermissionDeniedTest" duration-ms="18310" started-at="2023-06-08T18:14:20 IST" finished-at="2023-06-08T18:14:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- manageSubaccountPermissionDeniedTest -->
+        <test-method status="PASS" signature="inviteCandidatePermissionDeniedTest()[pri:6, instance:com.jobma.qa.test.SubAccountTest@17f3eefb]" name="inviteCandidatePermissionDeniedTest" duration-ms="119481" started-at="2023-06-08T18:14:38 IST" finished-at="2023-06-08T18:16:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inviteCandidatePermissionDeniedTest -->
+        <test-method status="PASS" signature="integrationPermissionDeniedTest()[pri:7, instance:com.jobma.qa.test.SubAccountTest@17f3eefb]" name="integrationPermissionDeniedTest" duration-ms="14430" started-at="2023-06-08T18:16:37 IST" finished-at="2023-06-08T18:16:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- integrationPermissionDeniedTest -->
+        <test-method status="PASS" signature="interviewListingPermissionDeniedTest()[pri:8, instance:com.jobma.qa.test.SubAccountTest@17f3eefb]" name="interviewListingPermissionDeniedTest" duration-ms="50154" started-at="2023-06-08T18:16:52 IST" finished-at="2023-06-08T18:17:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- interviewListingPermissionDeniedTest -->
+        <test-method status="PASS" signature="companyProfilePermissionDeniedTest()[pri:9, instance:com.jobma.qa.test.SubAccountTest@17f3eefb]" name="companyProfilePermissionDeniedTest" duration-ms="7870" started-at="2023-06-08T18:17:42 IST" finished-at="2023-06-08T18:17:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- companyProfilePermissionDeniedTest -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.jobma.qa.test.SubAccountTest@17f3eefb]" name="close" is-config="true" duration-ms="513" started-at="2023-06-08T18:17:50 IST" finished-at="2023-06-08T18:17:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.jobma.qa.test.SubAccountTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
